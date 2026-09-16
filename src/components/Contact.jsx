@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Copy, Check, Code2, Sparkles } from 'lucide-react';
-import { Github, Linkedin } from './Icons';
+import { Mail, Phone, MapPin, Send, Copy, Check, Code2, Sparkles, MessageSquare } from 'lucide-react';
+import { Github, Linkedin, Whatsapp } from './Icons';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
 
@@ -28,21 +28,19 @@ export const Contact = () => {
 
     // Trigger confetti
     confetti({
-      particleCount: 70,
-      spread: 60,
+      particleCount: 80,
+      spread: 70,
       origin: { y: 0.7 }
     });
 
     setSubmitted(true);
     setTimeout(() => {
-      window.location.href = `mailto:${portfolioData.personal.email}?subject=${encodeURIComponent(
-        formData.subject || `Portfolio Inquiry from ${formData.name}`
-      )}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-      )}`;
+      const formattedMessage = `Hi Kartikey,\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject || 'Portfolio Inquiry'}\n\nMessage:\n${formData.message}`;
+      const whatsappUrl = `https://wa.me/919453071519?text=${encodeURIComponent(formattedMessage)}`;
+      window.open(whatsappUrl, '_blank');
       setSubmitted(false);
       setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1200);
+    }, 1000);
   };
 
   return (
@@ -51,15 +49,15 @@ export const Contact = () => {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-semibold">
-            <Mail className="w-4 h-4" />
-            <span>GET IN TOUCH</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+            <Whatsapp className="w-4 h-4 text-emerald-400" />
+            <span>INSTANT DIRECT MESSAGING</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             Let's <span className="text-gradient">Connect & Build</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg">
-            Have an open opportunity, project inquiry, or technical role? Feel free to drop a message or reach out directly.
+            Have an open opportunity, project inquiry, or technical role? Drop a message to start an instant WhatsApp chat directly.
           </p>
         </div>
 
@@ -68,6 +66,29 @@ export const Contact = () => {
           {/* Direct Contact Cards Side */}
           <div className="lg:col-span-5 space-y-6">
             
+            {/* WhatsApp Quick Chat Card */}
+            <a
+              href="https://wa.me/919453071519?text=Hi%20Kartikey,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 rounded-3xl glass-panel border border-emerald-500/30 bg-emerald-950/20 flex items-center justify-between hover:border-emerald-500/60 hover:scale-[1.02] transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0 group-hover:scale-110 transition-transform">
+                  <Whatsapp className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-emerald-400 font-semibold">Instant WhatsApp Chat</div>
+                  <div className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    +91 9453071519
+                  </div>
+                </div>
+              </div>
+              <span className="px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-semibold">
+                Chat Now →
+              </span>
+            </a>
+
             {/* Email Card */}
             <div className="p-6 rounded-3xl glass-panel border border-slate-800 flex items-center justify-between hover:border-cyan-500/40 transition-all duration-300">
               <div className="flex items-center gap-4">
@@ -97,7 +118,7 @@ export const Contact = () => {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-slate-400">Phone / WhatsApp</div>
+                  <div className="text-xs font-mono text-slate-400">Phone Call</div>
                   <a href={`tel:${portfolioData.personal.phone}`} className="text-base font-bold text-white hover:text-indigo-300 transition-colors">
                     +91 {portfolioData.personal.phone}
                   </a>
@@ -167,16 +188,22 @@ export const Contact = () => {
               {submitted && (
                 <div className="absolute inset-0 z-20 bg-slate-950/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center space-y-3">
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center animate-bounce">
-                    <Sparkles className="w-8 h-8" />
+                    <Whatsapp className="w-8 h-8 text-emerald-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Opening Email Client...</h3>
+                  <h3 className="text-2xl font-bold text-white">Opening WhatsApp Chat...</h3>
                   <p className="text-sm text-slate-300 max-w-sm">
-                    Thank you for reaching out! Your message draft is being launched in your mail client.
+                    Thank you for reaching out! Your message draft is being launched directly in WhatsApp.
                   </p>
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold text-white">Send Me a Message</h3>
+              <div className="flex items-center justify-between">
+                <h3 className="text-2xl font-bold text-white">Send Me a Message</h3>
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-medium">
+                  <Whatsapp className="w-3.5 h-3.5" />
+                  <span>WhatsApp Direct</span>
+                </span>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
@@ -187,7 +214,7 @@ export const Contact = () => {
                     placeholder="John Doe"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition-colors text-sm"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors text-sm"
                   />
                 </div>
 
@@ -199,7 +226,7 @@ export const Contact = () => {
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition-colors text-sm"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors text-sm"
                   />
                 </div>
               </div>
@@ -211,7 +238,7 @@ export const Contact = () => {
                   placeholder="Opportunity / Technical Inquiry"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition-colors text-sm"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors text-sm"
                 />
               </div>
 
@@ -223,15 +250,16 @@ export const Contact = () => {
                   placeholder="Hello Kartikey, I'd like to talk about..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-500 transition-colors text-sm resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950/60 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors text-sm resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-xl shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2 group"
+                className="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-emerald-500 via-teal-600 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 shadow-xl shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center gap-2.5 group"
               >
-                <span>Send Direct Message</span>
+                <Whatsapp className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+                <span>Send via WhatsApp Direct</span>
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
