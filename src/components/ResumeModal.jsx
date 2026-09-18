@@ -124,7 +124,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           {/* Technical Skills Section */}
           <div className="space-y-3">
             <h2 className="text-base font-bold uppercase tracking-wider text-cyan-400 print:text-black border-b border-slate-800 print:border-black pb-1">
-              Technical Skills
+              Technical Skills & Competencies
             </h2>
             <div className="space-y-1.5 text-xs text-slate-300 print:text-gray-800">
               <div>
@@ -134,13 +134,19 @@ export const ResumeModal = ({ isOpen, onClose }) => {
                 <strong className="text-white print:text-black font-semibold">Core CS Skills:</strong> Data Structures & Algorithms (DSA), Operating Systems, Computer Networks, DBMS, SDLC
               </div>
               <div>
-                <strong className="text-white print:text-black font-semibold">Web Development:</strong> React.js, Node.js (basic), Express.js (basic), Tailwind CSS, MongoDB, SQL
+                <strong className="text-white print:text-black font-semibold">Web Development:</strong> React.js, Node.js (basic), Express.js (basic), Tailwind CSS, MongoDB, SQL, RESTful APIs
               </div>
               <div>
-                <strong className="text-white print:text-black font-semibold">AI / LLM Concepts:</strong> Large Language Models (LLMs), Prompt Engineering, Retrieval-Augmented Generation (RAG) Fundamentals, REST API Integration with AI Services
+                <strong className="text-white print:text-black font-semibold">Engineering & Testing:</strong> Software Development Life Cycle (SDLC), Software Testing, Debugging & Code Optimization
               </div>
               <div>
-                <strong className="text-white print:text-black font-semibold">Tools & Platforms:</strong> Git, GitHub, VS Code
+                <strong className="text-white print:text-black font-semibold">AI Tools & Concepts:</strong> AI Tools Utilization (Copilot, ChatGPT), Large Language Models (LLMs), Prompt Engineering, RAG Fundamentals, AI REST APIs
+              </div>
+              <div>
+                <strong className="text-white print:text-black font-semibold">Tools & Platforms:</strong> Git, GitHub, VS Code, Browser DevTools
+              </div>
+              <div>
+                <strong className="text-white print:text-black font-semibold">Professional Competencies:</strong> Team Collaboration, Task Ownership, Time Management, Continuous Learning, Receptiveness to Feedback
               </div>
             </div>
           </div>
