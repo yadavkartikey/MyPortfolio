@@ -43,7 +43,7 @@ export const Hero = ({ onOpenResume, onExploreProjects }) => {
               </h1>
               <p className="text-lg sm:text-xl text-slate-400 font-normal leading-relaxed max-w-2xl">
                 I'm <strong className="text-white font-semibold">Kartikey Yadav</strong>, a Computer Science graduate from <span className="text-slate-200 font-medium">AKGEC (CGPA 7.85)</span> based in <span className="text-slate-200 font-medium">Noida</span>. 
-                Focused on scalable <span className="text-blue-400 font-medium">MERN stack</span> architecture, clean software design, and algorithmic problem solving with <strong className="text-white font-semibold">200+ solved DSA questions</strong>.
+                Focused on scalable <span className="text-blue-400 font-medium">MERN stack</span> architecture, clean software design, and algorithmic problem solving.
               </p>
             </div>
 
