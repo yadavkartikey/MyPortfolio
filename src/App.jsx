@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ParticleBackground } from './components/ParticleBackground';
+import { SpotlightBackground } from './components/SpotlightBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -15,12 +15,9 @@ export function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-white">
-      {/* Background Interactive Canvas */}
-      <ParticleBackground />
-
-      {/* Grid Pattern Overlay */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-30 pointer-events-none z-0" />
+    <div className="relative min-h-screen bg-[#08090d] text-slate-100 font-sans selection:bg-blue-500/30 selection:text-white">
+      {/* Sleek Cursor Spotlight & Grid */}
+      <SpotlightBackground />
 
       {/* Header Navbar */}
       <Navbar onOpenResume={() => setIsResumeOpen(true)} />

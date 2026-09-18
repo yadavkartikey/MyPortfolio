@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, Code2, Sparkles, Terminal } from 'lucide-react';
+import { Menu, X, FileText, Terminal } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Navbar = ({ onOpenResume }) => {
@@ -8,7 +8,7 @@ export const Navbar = ({ onOpenResume }) => {
   const [activeSection, setActiveSection] = useState('hero');
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
+    { id: 'hero', label: 'Overview' },
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
@@ -47,46 +47,44 @@ export const Navbar = ({ onOpenResume }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'py-3 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60 shadow-xl shadow-cyan-950/20'
+          ? 'py-3.5 bg-[#08090d]/85 backdrop-blur-md border-b border-white/[0.08]'
           : 'py-5 bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        
         {/* Brand Logo */}
         <button
           onClick={() => scrollToSection('hero')}
-          className="flex items-center gap-2.5 group text-left focus:outline-none"
+          className="flex items-center gap-2.5 text-left focus:outline-none group"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform duration-300">
-            <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-              <Terminal className="w-5 h-5 text-cyan-400 group-hover:rotate-12 transition-transform duration-300" />
-            </div>
+          <div className="w-8 h-8 rounded-lg bg-white/[0.06] border border-white/[0.1] flex items-center justify-center text-white group-hover:border-white/[0.25] transition-colors">
+            <span className="font-mono font-bold text-sm">KY</span>
           </div>
           <div>
-            <span className="font-extrabold text-lg tracking-tight text-white flex items-center gap-1">
-              Kartikey<span className="text-cyan-400">.Yadav</span>
-              <span className="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span className="font-bold text-sm tracking-tight text-white block">
+              Kartikey Yadav
             </span>
-            <span className="text-[11px] font-mono text-slate-400 block -mt-1">
-              Full-Stack Developer
+            <span className="text-[11px] font-mono text-slate-500 block -mt-0.5">
+              Software Engineer
             </span>
           </div>
         </button>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex items-center gap-1 bg-slate-900/60 backdrop-blur-md p-1.5 rounded-full border border-slate-800/80 shadow-inner">
+        <nav className="hidden md:flex items-center gap-1 bg-white/[0.03] backdrop-blur-md p-1 rounded-full border border-white/[0.08]">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors ${
                   isActive
-                    ? 'bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-md shadow-cyan-500/25'
-                    : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                    ? 'bg-white text-slate-950 font-semibold shadow-sm'
+                    : 'text-slate-400 hover:text-white hover:bg-white/[0.05]'
                 }`}
               >
                 {item.label}
@@ -99,62 +97,62 @@ export const Navbar = ({ onOpenResume }) => {
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={onOpenResume}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 group"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium text-slate-300 bg-white/[0.04] border border-white/[0.1] hover:bg-white/[0.08] hover:text-white hover:border-white/[0.2] transition-colors"
           >
-            <FileText className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
-            <span>Resume / CV</span>
+            <FileText className="w-3.5 h-3.5 text-slate-400" />
+            <span>Resume</span>
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
+        {/* Mobile Toggle */}
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={onOpenResume}
-            className="p-2 rounded-lg bg-slate-900 text-cyan-400 border border-slate-800"
+            className="p-2 rounded-lg bg-white/[0.04] text-slate-300 border border-white/[0.08]"
             title="View Resume"
           >
-            <FileText className="w-5 h-5" />
+            <FileText className="w-4 h-4" />
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800"
+            className="p-2 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 hover:text-white"
             aria-label="Toggle Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6 text-cyan-400" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Slideout Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-3 mx-4 p-4 rounded-2xl glass-panel border border-slate-800 shadow-2xl space-y-2 animate-fadeIn">
+        <div className="md:hidden mt-3 mx-4 p-4 rounded-2xl bg-[#0c0e14] border border-white/[0.1] shadow-2xl space-y-1">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`w-full text-left px-4 py-3 rounded-xl text-base font-medium flex items-center justify-between transition-colors ${
+                className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium flex items-center justify-between transition-colors ${
                   isActive
-                    ? 'bg-slate-800/90 text-cyan-400 border border-cyan-500/30 font-semibold'
-                    : 'text-slate-300 hover:bg-slate-900/60 hover:text-white'
+                    ? 'bg-white/[0.08] text-white font-semibold'
+                    : 'text-slate-400 hover:bg-white/[0.04] hover:text-white'
                 }`}
               >
                 <span>{item.label}</span>
-                {isActive && <span className="w-2 h-2 rounded-full bg-cyan-400"></span>}
+                {isActive && <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>}
               </button>
             );
           })}
-          <div className="pt-2 border-t border-slate-800">
+          <div className="pt-2 border-t border-white/[0.08]">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenResume();
               }}
-              className="w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 text-white bg-gradient-to-r from-cyan-500 to-indigo-600 shadow-lg shadow-cyan-500/20"
+              className="w-full py-2.5 rounded-xl font-medium text-xs flex items-center justify-center gap-2 text-slate-950 bg-white"
             >
-              <FileText className="w-5 h-5" />
-              <span>View & Download Resume</span>
+              <FileText className="w-4 h-4" />
+              <span>View Resume</span>
             </button>
           </div>
         </div>
