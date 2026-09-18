@@ -16,7 +16,7 @@ export const portfolioData = {
       leetcode: "https://leetcode.com/u/Kartik_ey/",
       code360: "https://www.naukri.com/code360"
     },
-    summary: "I am Kartikey Yadav, a Computer Science graduate (B.Tech). Confident and detail-oriented, with proficiency in HTML, CSS, JavaScript, and React for building responsive web applications. Strong problem-solving skills in Data Structures and Algorithms (DSA). Experienced in designing and developing responsive web applications for optimal user experience. Seeking a full-time opportunity to apply my skills and expand my expertise in DSA and web development."
+    summary: "I'm a full-stack engineer who enjoys building reliable web applications and tackling challenging algorithmic problems. With hands-on experience across the MERN stack (React, Node.js, Express, MongoDB) and a strong foundation in Data Structures & Algorithms, I focus on shipping software that is performant, resilient, and thoughtfully designed. From shipping features on live projects at TechnoHacks to solving 200+ DSA problems across LeetCode and Code360, I take pride in writing clean, well-tested code and integrating modern engineering workflows."
   },
 
   roles: [
