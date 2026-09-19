@@ -27,7 +27,7 @@ This web application serves as the interactive digital resume and project showca
 - 🎓 **Academic & CS Foundations**: Spotlight on AKGEC credentials, CGPA 7.85, and a 5-pillar Core CS Grid (DSA, OS, DBMS, Networks, SDLC).
 - 💼 **Industry Internship**: Interactive timeline card for **TechnoHacks Solutions Pvt. Ltd.** with expandable achievement points.
 - 🛠️ **Filterable Skill Matrix**: Filter skills across *Web Dev, Languages, AI & LLMs, Core CS, and Tools* with animated progress bars.
-- 🚀 **Projects Showcase & Architecture Drawer**: Cards for the **MERN Stack Application (Food Delivery)** and **Hotel Management Web App** featuring expandable engineering breakdown drawers.
+- 🚀 **Projects Showcase & Architecture Drawer**: Cards for **Food Reels — MERN Food Discovery Platform**, **Interactive Engineering Portfolio**, and **Hotel Management Web App** featuring expandable engineering breakdown drawers.
 - 🏆 **Competitive Coding Honors**: Detailed achievements for 200+ solved DSA problems and Code360 Ninja Dominator rank.
 - 📄 **Printable & Downloadable Resume Viewer**: Full HTML CV overlay with single-click `window.print()` PDF generator (`ResumeModal.jsx`).
 - 📬 **Interactive Contact System**: Direct copy buttons for email (`kartikeyyadav1507@gmail.com`) and phone (`9453071519`), location badge (**Noida, India**), and mailto message handler.
@@ -39,7 +39,7 @@ This web application serves as the interactive digital resume and project showca
 - 💼 **LinkedIn Profile**: [linkedin.com/in/kartikey-yadav1507](https://www.linkedin.com/in/kartikey-yadav1507)
 - 🐙 **GitHub Profile**: [github.com/yadavkartikey](https://github.com/yadavkartikey)
 - 🧩 **LeetCode Profile**: [leetcode.com/u/Kartik_ey](https://leetcode.com/u/Kartik_ey/)
-- 🍔 **MERN Stack Project Repository**: [Food Delivery Application Repo](https://github.com/yadavkartikey/Food-Delivery-Application-main-1-/tree/main/Food-Delivery-Application-main)
+- 🎬 **Food Reels Project Repository**: [Food Reels — MERN Food Discovery Platform Repo](https://github.com/yadavkartikey/Food-Reels----MERN-Food-Discovery-Platform)
 
 ---
 

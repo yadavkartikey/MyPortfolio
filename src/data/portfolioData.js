@@ -114,20 +114,51 @@ export const portfolioData = {
 
   projects: [
     {
-      id: "mern-project",
-      title: "MERN Stack Application",
-      category: "Full-Stack Web App",
-      shortDesc: "Full-stack application featuring JWT authentication, protected API routes, and cloud persistence with MongoDB Atlas.",
-      description: "Architected a full-stack MERN application with a component-based React frontend, RESTful Express.js backend, and MongoDB Atlas for cloud data persistence. Built with secure authentication, modular Express middleware, and seamless Axios async communication.",
+      id: "food-reels",
+      title: "Food Reels — MERN Food Discovery Platform",
+      category: "Full-Stack Video Discovery",
+      shortDesc: "Short-form food reel discovery platform featuring smooth HTML5 video feeds, JWT authentication, and media delivery via ImageKit & Multer.",
+      description: "Architected an engaging food discovery web application leveraging modern MERN stack architecture with React 19 and Node.js. Features an Instagram/TikTok-style vertical short-form video feed powered by the HTML5 Video API, secure cookie-based JWT authentication, media storage pipeline with Multer and ImageKit, and RESTful API endpoints for seamless dish discovery and user interactions.",
       highlights: [
-        "Architected full-stack MERN application with React frontend, Express.js backend, and MongoDB Atlas.",
-        "Implemented JWT-based authentication, protected API routes, and dynamic client-side routing using React Router.",
-        "Designed and consumed RESTful APIs with full CRUD support, integrating Axios for async HTTP communication.",
-        "Optimized application performance through efficient MongoDB indexing and modular middleware for error handling."
+        "Built vertical short-form food reel player using React 19 and HTML5 Video API with smooth intersection-based autoplay/pause controls.",
+        "Developed secure authentication pipeline using HTTP-only cookies, JSON Web Tokens (JWT), and bcryptjs password hashing.",
+        "Implemented high-performance media upload and delivery workflow with Multer, UUID-based indexing, and ImageKit CDN integration.",
+        "Designed RESTful Express backend connected to MongoDB via Mongoose with optimized indexing for real-time video feeds."
       ],
-      technologies: ["React.js", "CSS", "HTML", "JavaScript", "Node.js", "Express.js", "MongoDB", "JWT", "Axios"],
-      github: "https://github.com/yadavkartikey/Food-Delivery-Application-main-1-/tree/main/Food-Delivery-Application-main",
-      demo: "https://github.com/yadavkartikey/Food-Delivery-Application-main-1-/tree/main/Food-Delivery-Application-main",
+      technologies: [
+        "React 19",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "HTML5 Video API",
+        "JWT",
+        "ImageKit",
+        "Multer",
+        "bcryptjs",
+        "Axios",
+        "Vite"
+      ],
+      github: "https://github.com/yadavkartikey/Food-Reels----MERN-Food-Discovery-Platform",
+      demo: "https://github.com/yadavkartikey/Food-Reels----MERN-Food-Discovery-Platform",
+      gradient: "from-amber-500 to-rose-600",
+      featured: true
+    },
+    {
+      id: "portfolio-showcase",
+      title: "Interactive Engineering Portfolio",
+      category: "Modern Web Engineering",
+      shortDesc: "High-performance personal developer showcase built with React, Vite, and Tailwind CSS featuring interactive cursor spotlights and recruiter quick-actions.",
+      description: "Designed and engineered a production-grade personal engineering portfolio focusing on high aesthetics, sub-second loading speeds, and intuitive recruiter interactions. Built with responsive glassmorphism, dynamic cursor spotlights, an ATS-optimized resume modal drawer, structured project architecture deep-dives, and direct WhatsApp messaging integration.",
+      highlights: [
+        "Engineered responsive developer showcase using React, Vite, and Tailwind CSS with sub-second initial load times.",
+        "Implemented interactive UI elements including custom cursor spotlight, print-optimized resume modal, and animated architecture drawers.",
+        "Integrated direct WhatsApp Web API hook and email automation for immediate recruiter outreach and engagement.",
+        "Optimized build assets and SEO metadata, ensuring fluid mobile-first responsiveness and high performance scores."
+      ],
+      technologies: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "HTML5", "CSS3", "Lucide Icons", "Vercel"],
+      github: "https://github.com/yadavkartikey/MyPortfolio",
+      demo: "https://github.com/yadavkartikey/MyPortfolio",
       gradient: "from-cyan-500 to-blue-600",
       featured: true
     },
