@@ -129,10 +129,10 @@ export const Hero = ({ onOpenResume, onExploreProjects }) => {
               <div className="py-5 space-y-4">
                 <div>
                   <h3 className="text-xl font-bold text-white tracking-tight">
-                    Food Delivery MERN Application
+                    Food Reels — MERN Food Discovery Platform
                   </h3>
                   <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                    Full-stack web application with JWT-secured authentication, custom REST APIs in Express.js, and cloud data persistence on MongoDB Atlas.
+                    Short-form food reel discovery platform featuring smooth HTML5 video feeds, JWT authentication, and media delivery via ImageKit & Multer.
                   </p>
                 </div>
 
@@ -140,17 +140,17 @@ export const Hero = ({ onOpenResume, onExploreProjects }) => {
                 <div className="space-y-2">
                   <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-300">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                    <span>JWT session handling with protected route middlewares</span>
+                    <span>Vertical reels player with HTML5 Video API & autoplay controls</span>
                   </div>
                   <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-300">
                     <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                    <span>Axios asynchronous communication & MongoDB indexing</span>
+                    <span>JWT auth, ImageKit CDN storage & MongoDB indexing</span>
                   </div>
                 </div>
 
                 {/* Stack Tags */}
                 <div className="flex flex-wrap gap-1.5 pt-1">
-                  {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT'].map((tech, idx) => (
+                  {['React 19', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'ImageKit'].map((tech, idx) => (
                     <span
                       key={idx}
                       className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.03] text-slate-300 border border-white/[0.08]"
