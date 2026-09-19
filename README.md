@@ -75,36 +75,7 @@ MyPortfolio/
 └── tailwind.config.js            # Custom color palette & keyframe glows
 ```
 
----
 
-## 🌐 100% Free Deployment Options
-
-### Option 1: Deploy on Vercel (Recommended ⚡)
-1. Go to [vercel.com](https://vercel.com/) and sign in with your GitHub account (`yadavkartikey`).
-2. Click **"Add New..."** → **"Project"**.
-3. Import your **`MyPortfolio`** repository.
-4. Keep the default settings (Framework Preset: **Vite**, Build Command: `npm run build`, Output Directory: `dist`).
-5. Click **"Deploy"**.
-🎉 Your site will be live on a free SSL URL like `https://myportfolio-yadavkartikey.vercel.app`!
-
----
-
-### Option 2: Deploy on GitHub Pages (Free via GitHub)
-1. Push this repository to GitHub (`git push -u origin main`).
-2. Go to your GitHub repository **Settings** → **Pages**.
-3. Under **Build and deployment** → **Source**, select **GitHub Actions**.
-4. Push any new commit to `main`, and the automated `.github/workflows/deploy.yml` workflow will build and deploy your site for free!
-
----
-
-### Option 3: Deploy on Netlify
-1. Go to [netlify.com](https://www.netlify.com/) and sign in with GitHub.
-2. Click **"Add new site"** → **"Import an existing project"**.
-3. Select **`MyPortfolio`**.
-4. Set Build Command: `npm run build` and Publish Directory: `dist`.
-5. Click **"Deploy MyPortfolio"**.
-
----
 
 ## 📜 License
 
